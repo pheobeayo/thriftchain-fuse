@@ -50,7 +50,7 @@ const GroupDetails = () => {
   const handleSaveClose = () => setShowModal(false);
   const handleClose = () => setOpen(false);
   const [savingsAmount, setSavingsAmount] = useState(0);
-  console.log(params)
+  console.log(groupthriftId)
 
   const [groupRequest, setGroupRequest] = useState([]);
 
@@ -236,6 +236,8 @@ const GroupDetails = () => {
     }
   }, []);
 
+  console.log(groupRequest)
+
   const fetchSavingsPerInterval = useCallback(async () => {
     try {
     const getGroupThriftContract = (providerOrSigner) =>
@@ -308,11 +310,11 @@ const GroupDetails = () => {
       ></section>
       <section className="my-8 p-6 rounded-lg bg-[#060E37]">
         <h2>Members Addresses</h2>
-        {Array.isArray(groupRequest[9]) ? (
+        {Array.isArray(groupRequest[10]) ? (
           <div>
             <ul>
-              {groupRequest[9].map((address, index) => (
-                <li key={index} className="list-disc my-2">
+              {groupRequest[10].map((address, index) => (
+                <li key={index} className="truncate list-disc my-2">
                   {address}
                 </li>
               ))}
@@ -326,11 +328,11 @@ const GroupDetails = () => {
         <div className="p-6 rounded-lg bg-[#060E37]">
           <p className="truncate">Account owner: {groupRequest[0]}</p>
           <p>Goal description: {groupRequest[2]}</p>
-          <p>Target amount: {Number(groupRequest[3]) / 1e18}</p>
-          <p>Duration Time : {Number(groupRequest[4]) / 86400 + " days"}</p>
+          <p>Target amount: {Number(groupRequest[3]) / 1e18} USDC</p>
+          <p>Duration Time : {Number(groupRequest[4]) / 86400 + " day/s"}</p>
           <p className="truncate">Currency: {groupRequest[5]}</p>
-          <p>Amount contributed: {Number(groupRequest[11]) / 1e18}</p>
-          <p>Savings Interval: {Number(groupRequest[10]) / 86400 + " days"}</p>
+          <p>Amount contributed: {Number(groupRequest[12]) / 1e18} USDC</p>
+          <p>Savings Interval: {Number(groupRequest[11]) / 86400 + " day/s"}</p>
         </div>
       </section>
       <section className="my-6 bg-[#060E37] p-8 rounded-lg">
