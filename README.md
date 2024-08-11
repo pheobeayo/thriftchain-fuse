@@ -3,6 +3,7 @@ Product Name: Thriftchain
 
 ## Table of Contents
 - [Overview](#Overview)
+- [Screenshots](#Screenshots)
 - [Features](#features)
 - [Demo](#demo)
 - [Pitch](#pitch)
@@ -18,6 +19,16 @@ Many individuals and groups struggle to effectively save money or contribute tow
 ThriftChain introduces a user-friendly interface and incorporates blockchain technology to establish a secure and transparent financial ecosystem. Individuals and groups can set personalized financial goals, contribute in stable coins of users' choice, and track their progress in real-time. The product allows users to participate in the financial inclusion selecting their saving frequency (daily, weekly, bi-weekly, or monthly) while defining their financial goals, be it for personal objectives or communal assets. 
 <br />
 ThriftChain facilitates diverse asset management and goods acquisition, including home appliances, properties, gadgets, vehicles, and educational resources. ThriftChain provides a secure, transparent, and efficient way for users to save, contribute, and work towards achieving financial and lifestyle goals thus fostering a culture of disciplined and goal-oriented financial planning. Smart contracts govern contributions, ensuring equitable distribution and fractional ownership.
+
+
+### Screenshots
+
+- 1
+![Screenshot](./public/screenshot1.jpg)
+- 2
+![Screenshot](./public/screenshot2.jpg)
+
+
 
 ### Features
 
