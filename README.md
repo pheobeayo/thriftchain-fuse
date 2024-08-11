@@ -19,7 +19,7 @@ ThriftChain introduces a user-friendly interface and incorporates blockchain tec
 <br />
 ThriftChain facilitates diverse asset management and goods acquisition, including home appliances, properties, gadgets, vehicles, and educational resources. ThriftChain provides a secure, transparent, and efficient way for users to save, contribute, and work towards achieving financial and lifestyle goals thus fostering a culture of disciplined and goal-oriented financial planning. Smart contracts govern contributions, ensuring equitable distribution and fractional ownership.
 
-### Features and Functionality
+### Features
 
 - User Account Management:
 
