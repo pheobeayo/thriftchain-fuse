@@ -4,7 +4,7 @@ import {
   createRoutesFromElements,
   RouterProvider
 } from "react-router-dom";
-import MainLayout from "./Layout/MainLayout";
+import MainLayout from "./layout/MainLayout";
 import Home from "./pages/Home";
 import DashboardLayout from "./layout/DashboardLayout";
 import { configWeb3Modal } from "./connection";
@@ -15,6 +15,7 @@ import About from "./pages/About";
 import GroupThrift from "./pages/Dashboard/GroupThrift";
 import GroupDetails from "./pages/GroupDetails";
 import Explore from "./pages/Dashboard/Explore";
+import Message from "./pages/Dashboard/Message";
 
 configWeb3Modal();
 
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
         <Route path="/dashboard/singlethrift/:singlethriftId" element={<SingleDetails />} />
         <Route path="groupthrift" element={<GroupThrift />} />
         <Route path="/dashboard/groupthrift/:groupthriftId" element={<GroupDetails />} />
+        <Route path="message" element={<Message />} />
       </Route>
     </Route>
   )
