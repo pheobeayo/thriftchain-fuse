@@ -50,7 +50,6 @@ const GroupDetails = () => {
   const handleSaveClose = () => setShowModal(false);
   const handleClose = () => setOpen(false);
   const [savingsAmount, setSavingsAmount] = useState(0);
-  console.log(groupthriftId)
 
   const [groupRequest, setGroupRequest] = useState([]);
 
@@ -235,8 +234,6 @@ const GroupDetails = () => {
       console.error(error);
     }
   }, []);
-
-  console.log(groupRequest)
 
   const fetchSavingsPerInterval = useCallback(async () => {
     try {
