@@ -23,6 +23,7 @@ const Sidebar = () => {
       <NavLink to="singlethrift" className="text-[18px] text-white  flex items-center py-4 mb-4 px-6" style={({isActive}) => isActive ? activeStyle : null }><BiBox className="mr-4" /> Single Thrift</NavLink>
       <NavLink to="groupthrift" className="text-[18px] text-white flex items-center py-4 mb-4 px-6" style={({isActive}) => isActive ? activeStyle : null }><BiBox className="mr-4" /> Group Thrift</NavLink>
       <button className="text-[18px] text-white  flex items-center py-4 mb-4 px-6  hover:text-[#015C28]" onClick={() => disconnect()}><TbSettings className="mr-4 text-[18px]"  /> Log out</button>
+      
     </div>
   );
 }
