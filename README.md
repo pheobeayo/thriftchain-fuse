@@ -2,16 +2,10 @@
 Product Name: Thriftchain
 
 ## Table of Contents
-- [Introduction](#introduction)
+- [Overview](#Overview)
 - [Features](#features)
 - [Demo](#demo)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Language Community](#LanguageCommunity)
-- [Contributing](#contributing)
-- [License](#license)
+- [Pitch](#pitch)
 
 
 ### Overview
