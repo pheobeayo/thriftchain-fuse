@@ -23,8 +23,8 @@ const UseFetchUserGroup = () => {
         
             const contract = getThriftContract(readOnlyProvider);
             const res = await contract.userGroupThrift(address);
-            const converted = res?.map((addInfo)=>{
-                return{addInfo,
+            const converted = res?.map((groupAdd)=>{
+                return{groupAdd,
             }
             }) 
             setAllUserGroupRequests(converted)
@@ -47,7 +47,7 @@ const UseFetchUserGroup = () => {
             topics: [ethers.id("NewSingleCreated(address,string,SingleThrift)")],
         };
 
-        wssProvider.getLogs({ ...filter, fromBlock: 4702687 }).then((events) => {
+        wssProvider.getLogs({ ...filter, fromBlock: 17395022 }).then((events) => {
             setCount(events.length + 1);
         });
 

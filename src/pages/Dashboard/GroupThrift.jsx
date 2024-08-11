@@ -23,7 +23,7 @@ const GroupThrift = () => {
 
   return (
     <div className="text-white">
-      <section className='flex justify-between bg-[#060E37] p-6 rounded-lg mb-8'>
+      <section className='flex justify-between bg-[#060E37] p-6 rounded-lg mb-8 flex-col lg:flex-row md:flex-row'>
         <div className='w-[100%] lg:w-[48%] md:w-[48%]'>
           <h2 className='text-[18px] lg:text-[28px] md:text-[28px] font-bold mb-4'>Manage your collective goals</h2>
           <p>Create a group thrift, track and achieve your personal financial goals with others, stay motivated to save to a cause.</p>
@@ -51,7 +51,7 @@ const GroupThrift = () => {
             </div>
           ))
         ) : (
-          <div className='flex flex-col items-center w-full'>
+          <div className='flex flex-col items-center w-full mt-16'>
             <RiFolderWarningFill className='text-[48px] mb-4'/>
             <h2 className='text-[18px] lg:text-[24px] md:text-[24px] mb-4'>No active thrift yet!</h2>
           </div>

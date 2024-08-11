@@ -47,7 +47,7 @@ const UseFetchUserSingle = () => {
             topics: [ethers.id("NewSingleCreated(address,string,SingleThrift)")],
         };
 
-        wssProvider.getLogs({ ...filter, fromBlock: 4702687 }).then((events) => {
+        wssProvider.getLogs({ ...filter, fromBlock: 17395022 }).then((events) => {
             setCount(events.length + 1);
         });
 

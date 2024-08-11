@@ -286,7 +286,7 @@ const SingleDetails = () => {
 
   return (
     <main className="text-white">
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-4 lg:flex-row md:flex-row flex-col">
         <h2 className="mb-4 lg:text-[38px] md:text-[38px] text-[24px]">
           Thrift Details
         </h2>
@@ -326,7 +326,7 @@ const SingleDetails = () => {
               <p className="my-4">
                 Your calculated savings per interval is
               </p>
-              <p>{(Number(savingsAmount) / 1e18).toFixed(2)} ETH</p>
+              <p>{(Number(savingsAmount) / 1e18).toFixed(2)} USDC</p>
               <p>Are you sure you want to proceed? </p>
               <div className="mb-4">
                 <button
@@ -354,30 +354,26 @@ const SingleDetails = () => {
       ></section>
       <section className="my-4">
         <div className="p-6 rounded-lg bg-[#060E37]">
-          <p>Account owner: {accountRequest[0]}</p>
-          {/* <p>Thrift contract address: {accountRequest[1]}</p> */}
+          <p className="truncate">Account owner: {accountRequest[0]}</p>
           <p>Goal description: {accountRequest[2]}</p>
-          <p>Target amount: {Number(accountRequest[3]) / 1e18} ETH</p>
-          <p>Duration Time : {Number(accountRequest[4]) / 86400 + " days"}</p>
-          <p>Currency: {accountRequest[5]}</p>
-          {/* <p>Start Time: {Number(accountRequest[6]) / 86400}</p>
-          <p>End Time: {Number(accountRequest[7]) / 86400}</p> */}
+          <p>Target amount: {Number(accountRequest[3]) / 1e18} USDC</p>
+          <p>Duration Time : {Number(accountRequest[4]) / 86400 + " day/s"}</p>
+          <p className="truncate">Currency: {accountRequest[5]}</p>
           <p>Amount contributed: {Number(accountRequest[8]) / 1e18} ETH</p>
-          <p>Savings Interval: {Number(accountRequest[9]) / 86400 + " days"}</p>
+          <p>Savings Interval: {Number(accountRequest[9]) / 86400 + " day/s"}</p>
           <p>Goal status: {accountRequest[10] === "true" ? "true" : "false"}</p>
-          {/* <p>Cancelled: {accountRequest[11] === "true" ? "true" : "false"}</p> */}
         </div>
       </section>
       <section className="my-6 bg-[#060E37] p-8 rounded-lg">
         <h3 className="mb-4 lg:text-[28px] md:text-[28px] text-[20px] font-bold">
           Manage Single Thrift Savings
         </h3>
-        <div className="flex justify-between">
-          <p className="text-[22px] w-[100%] lg:w-[40%] md:w-[40%] my-4">
+        <div className="flex justify-between lg:flex-row md:flex-row flex-col">
+          <p className="lg:text-[22px] md:text-[22px] text-[18px] w-[100%] lg:w-[40%] md:w-[40%] my-4">
             Effortlessly manage your savings goals, targets and withdrawals with
             ease.
           </p>
-          <div className="flex justify-between items-center w-[100%] lg:w-[55%] md:w-[55%]">
+          <div className="flex justify-between items-center w-[100%] lg:w-[55%] md:w-[55%] lg:flex-row md:flex-row flex-col">
             <div>
               <button
                 className="style border py-2 px-8 my-4  hover:bg-[#9C0F94]"

@@ -46,13 +46,13 @@ const Dashboard = () => {
 
       <div className="p-8 bg-[#060E37] rounded-lg mb-8 mt-2">
         <div>
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center flex-col lg:flex-row md:flex-row">
             <div className="w-[100%] lg:w-[50%] md:w-[50%]">
               <h2 className="text-[18px] lg:text-[22px] md:text-[22px] font-bold">
                 Browse and find <br />
                 contribution modules to join
               </h2>
-              <div className="mt-4 mb-3 flex items-center">
+              <div className="mt-4 mb-3 flex items-center flex-col lg:flex-row md:flex-row">
                 <button className="style border py-2 px-8 my-4 hover:bg-[#9C0F94] mr-4 w-[100%] lg:w-[50%] md:w-[50%]" onClick={() => navigate('/dashboard/singlethrift')}>
                   Single Thrifts
                 </button>

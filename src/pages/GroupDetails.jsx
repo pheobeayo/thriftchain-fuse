@@ -50,6 +50,7 @@ const GroupDetails = () => {
   const handleSaveClose = () => setShowModal(false);
   const handleClose = () => setOpen(false);
   const [savingsAmount, setSavingsAmount] = useState(0);
+  console.log(params)
 
   const [groupRequest, setGroupRequest] = useState([]);
 
@@ -257,7 +258,7 @@ const GroupDetails = () => {
 
   return (
     <main className="text-white">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between flex-col lg:flex-row md:flex-row">
         <h2 className="mb-4 lg:text-[38px] md:text-[38px] text-[24px]">
           Thrift Details
         </h2>
@@ -278,7 +279,7 @@ const GroupDetails = () => {
             <Box sx={style}>
               <MdSavings className="text-[58px]" />
               <p className="my-4">Your calculated savings per interval is</p>
-              <p>{(Number(savingsAmount) / 1e18).toFixed(2)} ETH</p>
+              <p>{(Number(savingsAmount) / 1e18).toFixed(2)} USDC</p>
               <input type="text" placeholder="Enter your wallet address" onChange={(e) => setMemberAdd(e.target.value)} className="bg-[#B1B7DD] border border-[#B1B7DD] rounded w-full py-2 px-3 text-[#0A134C] mb-3 leading-tight focus:outline-none focus:shadow-outline" />
               <p>Are you sure you want to proceed? </p>
               <div className="mb-4">
@@ -323,11 +324,11 @@ const GroupDetails = () => {
       </section>
       <section className="my-4">
         <div className="p-6 rounded-lg bg-[#060E37]">
-          <p>Account owner: {groupRequest[0]}</p>
+          <p className="truncate">Account owner: {groupRequest[0]}</p>
           <p>Goal description: {groupRequest[2]}</p>
           <p>Target amount: {Number(groupRequest[3]) / 1e18}</p>
           <p>Duration Time : {Number(groupRequest[4]) / 86400 + " days"}</p>
-          <p>Currency: {groupRequest[5]}</p>
+          <p className="truncate">Currency: {groupRequest[5]}</p>
           <p>Amount contributed: {Number(groupRequest[11]) / 1e18}</p>
           <p>Savings Interval: {Number(groupRequest[10]) / 86400 + " days"}</p>
         </div>
@@ -336,14 +337,15 @@ const GroupDetails = () => {
         <h3 className="mb-4 lg:text-[28px] md:text-[28px] text-[20px] font-bold">
           Manage Group Thrift Savings
         </h3>
-        <div className="flex justify-between">
-          <p className="text-[22px] w-[100%] lg:w-[40%] md:w-[40%] my-4">
+        <div className="flex justify-between flex-col lg:flex-row md:flex-row">
+          <p className="lg:text-[22px] md:text-[22px] text-[18px]
+           w-[100%] lg:w-[40%] md:w-[40%] my-4">
             Effortlessly manage your savings goals, targets and withdrawals with
             ease.
           </p>
           <div className="w-[100%] lg:w-[55%] md:w-[55%]">
-          <div className="flex items-center">
-            <input type="text" placeholder="Enter your wallet address" onChange={(e) => setMemberAdd(e.target.value)} className="bg-[#B1B7DD] border border-[#B1B7DD] w-full py-2 px-3 text-[#0A134C] leading-tight focus:outline-none focus:shadow-outline" />
+          <div className="flex items-center flex-col lg:flex-row md:flex-row">
+            <input type="text" placeholder="Enter your wallet address" onChange={(e) => setMemberAdd(e.target.value)} className="bg-[#ffffff23] w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline" />
             <button
               className="style border py-2 px-8 my-4 hover:bg-[#9C0F94]"
               onClick={handleWithdraw}

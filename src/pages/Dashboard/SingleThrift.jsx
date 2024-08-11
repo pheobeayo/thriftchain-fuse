@@ -8,7 +8,6 @@ import Stack from '@mui/material/Stack';
 
 const SingleThrift = () => {
   const allUserRequests = UseFetchUserSingle();
-  console.log(allUserRequests)
 
   const itemsPerPage = 6; 
   const [currentPage, setCurrentPage] = useState(1);
@@ -25,7 +24,7 @@ const SingleThrift = () => {
 
   return (
     <div className="text-white">
-      <section className='flex justify-between bg-[#060E37] p-6 rounded-lg mb-8 '>
+      <section className='flex justify-between bg-[#060E37] p-6 rounded-lg mb-8  flex-col lg:flex-row md:flex-row'>
         <div className='w-[100%] lg:w-[48%] md:w-[48%]'>
         <h2 className='text-[18px] lg:text-[28px] md:text-[28px] font-bold mb-4'>Manage your personal goals</h2>
         <p>Create a single thrift, track and achieve your personal financial goals with ease.</p>
